@@ -27,15 +27,14 @@ internal class Program
             Console.Write(ArrayList[i] + " ");
         Console.ReadKey();
     }
-    static int Insert(int[] array, int n, int x, int pos)
+    static int Insert(int[] arr, int n, int x, int pos)
     {
         {
             for (int i = n - 1; i >= pos; i--)
-                array[i + 1] = array[i];
-            return array[pos] = x;
+                arr[i + 1] = arr[i];
+            return arr[pos] = x;
         }
     }
-   
 
     static int Delete(int[] array, int n, int x)
     {
@@ -46,12 +45,14 @@ internal class Program
             Console.WriteLine("Element not found");
             return n;
         }
+
         else
+
             for (int i = pos; i < n - 1; i++)
                 array[i] = array[i + 1];
 
 
         return n - 1;
-
-
     }
+
+}
