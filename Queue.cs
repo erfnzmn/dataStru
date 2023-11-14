@@ -14,7 +14,6 @@ internal class Program
             front = -1;
             rear = -1;
             max = size;
-
         }
 
         public void enqueue(int item)
@@ -61,24 +60,24 @@ internal class Program
         }
         public bool isFull()
         {
-            if (rear == max - 1)
+            if (rear == max - 1) 
                 return true;
             else
                 return false;
         }
-            //static void Main()
-            //{
-            //    Queue Q = new Queue(5);
+        static void Main()
+        {
+            Queue Q = new Queue(5);
 
-            //    Q.enqueue(10);
-            //Q.enqueue(20);
-            //Q.enqueue(30);
-            //Q.enqueue(40);
-            //Q.enqueue(50);
-            //Q.deleteQueue();
-            //Q.deleteQueue();
-            //Console.WriteLine(Q.isEmpty());
-            //    Q.printQueue();
-            //}
+            Q.enqueue(10);
+            Q.enqueue(20);
+            Q.enqueue(30);
+            Q.enqueue(40);
+            Q.enqueue(50);
+            Q.deleteQueue();
+            Q.deleteQueue();
+            Console.WriteLine(Q.isEmpty());
+            Q.printQueue();
+        }
     }
 }

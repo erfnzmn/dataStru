@@ -1,8 +1,34 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 
 internal class Program
 {
-    private static void Main(string[] args)
+    static int Insert(int[] array, int n, int x, int pos)
+    {
+        {
+            for (int i = n - 1; i >= pos; i--)
+                array[i + 1] = array[i];
+            return array[pos] = x;
+        }
+    }
+    static int Delete(int[] array, int n, int x)
+    {
+        int pos = Find(array, n, x);
+
+        if (pos == -1)
+        {
+            Console.WriteLine("Element not found");
+            return n;
+        }
+        else
+            for (int i = pos; i < n - 1; i++)
+                array[i] = array[i + 1];
+
+
+        return n - 1;
+
+
+    }
+    public static void Main(string[] args)
     {
         int[] ArrayList = new int[10];
         ArrayList[0] = 2;
@@ -27,31 +53,4 @@ internal class Program
             Console.Write(ArrayList[i] + " ");
         Console.ReadKey();
     }
-    static int Insert(int[] array, int n, int x, int pos)
-    {
-        {
-            for (int i = n - 1; i >= pos; i--)
-                array[i + 1] = array[i];
-            return array[pos] = x;
-        }
-    }
-   
-
-    static int Delete(int[] array, int n, int x)
-    {
-        int pos = Find(array, n, x);
-
-        if (pos == -1)
-        {
-            Console.WriteLine("Element not found");
-            return n;
-        }
-        else
-            for (int i = pos; i < n - 1; i++)
-                array[i] = array[i + 1];
-
-
-        return n - 1;
-
-
-    }
+}
