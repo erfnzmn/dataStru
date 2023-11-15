@@ -1,0 +1,15 @@
+D:\dataStru\Halghavi\Halghavi\obj\Debug\net7.0\Halghavi.csproj.AssemblyReference.cache
+D:\dataStru\Halghavi\Halghavi\obj\Debug\net7.0\Halghavi.GeneratedMSBuildEditorConfig.editorconfig
+D:\dataStru\Halghavi\Halghavi\obj\Debug\net7.0\Halghavi.AssemblyInfoInputs.cache
+D:\dataStru\Halghavi\Halghavi\obj\Debug\net7.0\Halghavi.AssemblyInfo.cs
+D:\dataStru\Halghavi\Halghavi\obj\Debug\net7.0\Halghavi.csproj.CoreCompileInputs.cache
+D:\dataStru\Halghavi\Halghavi\bin\Debug\net7.0\Halghavi.exe
+D:\dataStru\Halghavi\Halghavi\bin\Debug\net7.0\Halghavi.deps.json
+D:\dataStru\Halghavi\Halghavi\bin\Debug\net7.0\Halghavi.runtimeconfig.json
+D:\dataStru\Halghavi\Halghavi\bin\Debug\net7.0\Halghavi.dll
+D:\dataStru\Halghavi\Halghavi\bin\Debug\net7.0\Halghavi.pdb
+D:\dataStru\Halghavi\Halghavi\obj\Debug\net7.0\Halghavi.dll
+D:\dataStru\Halghavi\Halghavi\obj\Debug\net7.0\refint\Halghavi.dll
+D:\dataStru\Halghavi\Halghavi\obj\Debug\net7.0\Halghavi.pdb
+D:\dataStru\Halghavi\Halghavi\obj\Debug\net7.0\Halghavi.genruntimeconfig.cache
+D:\dataStru\Halghavi\Halghavi\obj\Debug\net7.0\ref\Halghavi.dll
