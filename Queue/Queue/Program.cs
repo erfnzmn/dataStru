@@ -63,7 +63,19 @@ internal class Program
                 front2--;
             }
         }
-
+        public void reverse()
+        {
+            int front2 = front;
+            int rear2 = rear;
+            int temp;
+            for (int i = front2 + 1; i < rear2; i++)
+            {
+                temp = que[++front2];
+                que[front2] = que[rear2];
+                que[rear2] = temp;
+                rear2--;
+            }
+        }
         public bool isFull()
         {
             if (rear == max - 1)
