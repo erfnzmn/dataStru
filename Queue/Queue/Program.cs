@@ -1,4 +1,5 @@
 ﻿using System;
+
 internal class Program
 {
     class Queue
@@ -15,6 +16,15 @@ internal class Program
             rear = -1;
             max = size;
 
+        }
+        public int printQueue()
+        {
+            for (int i = front + 1; i <= rear; i++)
+            {
+                Console.Write(que[i] + " ");
+
+            }
+            return 1;
         }
 
         public void addQueue(int item)
@@ -40,23 +50,20 @@ internal class Program
                 return que[++front];
             }
         }
-        public int printQueue()
+        public int Peek()
         {
-            for (int i = front + 1; i <= rear; i++)
+            int front2 = front;
+            if (isEmpty())
             {
-                Console.Write(que[i] + " ");
-
+                return -1;
             }
-            return 1;
+            else
+            {
+                return que[++front2];
+                front2--;
+            }
         }
 
-        public bool isEmpty()
-        {
-            if (front == rear)
-                return true;
-            else
-                return false;
-        }
         public bool isFull()
         {
             if (rear == max - 1)
@@ -64,19 +71,12 @@ internal class Program
             else
                 return false;
         }
-        //static void Main()
-        //{
-        //    Queue Q = new Queue(5);
-
-        //    Q.enqueue(10);
-        //Q.enqueue(20);
-        //Q.enqueue(30);
-        //Q.enqueue(40);
-        //Q.enqueue(50);
-        //Q.deleteQueue();
-        //Q.deleteQueue();
-        //Console.WriteLine(Q.isEmpty());
-        //    Q.printQueue();
-        //}
+        public bool isEmpty()
+        {
+            if (front == rear)
+                return true;
+            else
+                return false;
+        }
     }
 }
