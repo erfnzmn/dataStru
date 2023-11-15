@@ -48,7 +48,25 @@
                 return que[(front + 1) % max];
             }
         }
-        public bool isFull()
+        public void Reverse()
+        {
+            int front2 = front;
+            int rear2 = rear;
+            int temp;
+            for (int i = (front2 + 1) % max; i != rear2; i = (i + 1) % max)
+            {
+                temp = que[i];
+                que[i] = que[rear2];
+                que[rear2] = temp;
+                if (rear2 == 0)
+                    rear2 = max - 1;
+                else
+                    rear2--;
+                if (i == rear2)
+                    break;
+            }
+        }
+            public bool isFull()
         {
             if (front == (rear + 1) % max)
                 return true;
