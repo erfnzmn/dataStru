@@ -80,13 +80,6 @@
             else
                 return false;
         }
-        public void printQueue()
-        {
-            for(int i=front+1;i<=rear;i++)
-            {
-                Console.Write(que[i] + " ");
-            }
-        }
-
+        
     }
 }
