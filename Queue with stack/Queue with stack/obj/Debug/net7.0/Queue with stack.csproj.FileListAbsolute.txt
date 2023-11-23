@@ -1,0 +1,15 @@
+D:\dataStru\Queue with stack\Queue with stack\bin\Debug\net7.0\Queue with stack.exe
+D:\dataStru\Queue with stack\Queue with stack\bin\Debug\net7.0\Queue with stack.deps.json
+D:\dataStru\Queue with stack\Queue with stack\bin\Debug\net7.0\Queue with stack.runtimeconfig.json
+D:\dataStru\Queue with stack\Queue with stack\bin\Debug\net7.0\Queue with stack.dll
+D:\dataStru\Queue with stack\Queue with stack\bin\Debug\net7.0\Queue with stack.pdb
+D:\dataStru\Queue with stack\Queue with stack\obj\Debug\net7.0\Queue with stack.csproj.AssemblyReference.cache
+D:\dataStru\Queue with stack\Queue with stack\obj\Debug\net7.0\Queue with stack.GeneratedMSBuildEditorConfig.editorconfig
+D:\dataStru\Queue with stack\Queue with stack\obj\Debug\net7.0\Queue with stack.AssemblyInfoInputs.cache
+D:\dataStru\Queue with stack\Queue with stack\obj\Debug\net7.0\Queue with stack.AssemblyInfo.cs
+D:\dataStru\Queue with stack\Queue with stack\obj\Debug\net7.0\Queue with stack.csproj.CoreCompileInputs.cache
+D:\dataStru\Queue with stack\Queue with stack\obj\Debug\net7.0\Queue with stack.dll
+D:\dataStru\Queue with stack\Queue with stack\obj\Debug\net7.0\refint\Queue with stack.dll
+D:\dataStru\Queue with stack\Queue with stack\obj\Debug\net7.0\Queue with stack.pdb
+D:\dataStru\Queue with stack\Queue with stack\obj\Debug\net7.0\Queue with stack.genruntimeconfig.cache
+D:\dataStru\Queue with stack\Queue with stack\obj\Debug\net7.0\ref\Queue with stack.dll
