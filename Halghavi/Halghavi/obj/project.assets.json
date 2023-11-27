@@ -15,11 +15,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dataStru\\Halghavi\\Halghavi\\Halghavi.csproj",
+      "projectUniqueName": "D:\\dataStru\\dataStru\\Halghavi\\Halghavi\\Halghavi.csproj",
       "projectName": "Halghavi",
+<<<<<<< HEAD
       "projectPath": "D:\\dataStru\\Halghavi\\Halghavi\\Halghavi.csproj",
       "packagesPath": "C:\\Users\\fanzm\\.nuget\\packages\\",
       "outputPath": "D:\\dataStru\\Halghavi\\Halghavi\\obj\\",
+=======
+      "projectPath": "D:\\dataStru\\dataStru\\Halghavi\\Halghavi\\Halghavi.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\dataStru\\dataStru\\Halghavi\\Halghavi\\obj\\",
+>>>>>>> aynaz2
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
