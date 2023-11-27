@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dataStru\\Queue with stack\\Queue with stack\\Queue with stack.csproj",
+      "projectUniqueName": "D:\\dataStru\\dataStru\\Queue with stack\\Queue with stack\\Queue with stack.csproj",
       "projectName": "Queue with stack",
-      "projectPath": "D:\\dataStru\\Queue with stack\\Queue with stack\\Queue with stack.csproj",
+      "projectPath": "D:\\dataStru\\dataStru\\Queue with stack\\Queue with stack\\Queue with stack.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\dataStru\\Queue with stack\\Queue with stack\\obj\\",
+      "outputPath": "D:\\dataStru\\dataStru\\Queue with stack\\Queue with stack\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
