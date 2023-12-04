@@ -1,23 +1,44 @@
 ﻿using System;
 internal class Program
 {
-    
+
     public class Node
     {
         public int data;
-        public Node next;
+        public Node link;
         Node head;
-        public Node(int d)
+        public Node(int x)
         {
-            data = d;
-            next = null;
+            data = x;
+            link = null;
         }
 
+        public void InsertAtTheBeginning(int ndata)
+        {
+            Node newnode = new Node(ndata);
+            newnode.link = head;
+            head = newnode;
+        }
         public void InsertAtTheEnd(int ndata)
         {
-                Node newnode = new Node(ndata);
-                newnode.next = head;
-                head = newnode;
+            Node newnode = new Node(ndata);
+            if (head == null)
+            {
+                head = new Node(ndata);
+                return;
+            }
+            newnode.link = null;
+
+            Node last = head;
+            while (last.link != null)
+                last = last.link;
+
+            last.link = newnode;
+            return;
+        }
+        public void DeleteFromBeginning()
+        {
+            head = head.link;
         }
         public void DeleteWithPosition(int position)
         {
@@ -28,27 +49,38 @@ internal class Program
             Node temp = head;
             if (position == 0)
             {
-                head = temp.next;
+                head = temp.link;
                 return;
             }
             for (int i = 0; i != null && i < position - 1; i++)
 
-                temp = temp.next;
-            if (temp == null || temp.next == null)
+                temp = temp.link;
+            if (temp == null || temp.link == null)
             {
                 return;
             }
-            Node next = temp.next.next;
-            temp.next = next;
+            Node next = temp.link.link;
+            temp.link = next;
         }
-      
+        public void DeleteFromEnd()
+        {
+            Node last = head;
+            Node prev = null;
+            while (last.link != null)
+            {
+                prev = last;
+                last = last.link;
+            }
+            prev.link = null;
+        }
+
         public void printList()
         {
             Node node = head;
             while (node != null)
             {
                 Console.Write(node.data + " ");
-                node = node.next;
+                node = node.link;
             }
         }
     }
