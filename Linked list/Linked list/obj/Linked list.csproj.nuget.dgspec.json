@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dataStru\\Linked list\\Linked list\\Linked list.csproj": {}
+    "D:\\dataStru\\dataStru\\Linked list\\Linked list\\Linked list.csproj": {}
   },
   "projects": {
-    "D:\\dataStru\\Linked list\\Linked list\\Linked list.csproj": {
+    "D:\\dataStru\\dataStru\\Linked list\\Linked list\\Linked list.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataStru\\Linked list\\Linked list\\Linked list.csproj",
+        "projectUniqueName": "D:\\dataStru\\dataStru\\Linked list\\Linked list\\Linked list.csproj",
         "projectName": "Linked list",
-        "projectPath": "D:\\dataStru\\Linked list\\Linked list\\Linked list.csproj",
+        "projectPath": "D:\\dataStru\\dataStru\\Linked list\\Linked list\\Linked list.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\dataStru\\Linked list\\Linked list\\obj\\",
+        "outputPath": "D:\\dataStru\\dataStru\\Linked list\\Linked list\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

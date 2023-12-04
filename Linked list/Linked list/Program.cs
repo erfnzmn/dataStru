@@ -19,6 +19,16 @@ internal class Program
             newnode.link = head;
             head = newnode;
         }
+        public void InsertIndex(Node pnode, int ndata)
+        {
+            if (pnode == null)
+            {
+                return;
+            }
+            Node newnode = new Node(ndata);
+            newnode.link = pnode.link;
+            pnode.link = newnode;
+        }
         public void InsertAtTheEnd(int ndata)
         {
             Node newnode = new Node(ndata);
@@ -73,7 +83,31 @@ internal class Program
             }
             prev.link = null;
         }
-
+        public int Length(Node head)
+        {
+            Node temp = head;
+            int count = 0;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.link;
+            }
+            return count;
+        }
+        public void Reverse()
+        {
+            Node pnode = null;
+            Node current = head;
+            Node next = null;
+            while (current != null)
+            {
+                next = current.link;
+                current.link = pnode;
+                pnode = current;
+                current = next;
+            }
+            head = pnode;
+        }
         public void printList()
         {
             Node node = head;
