@@ -1,138 +1,159 @@
 ﻿using System;
-internal class Program
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex
 {
-
-    public class Node
+    class Program
     {
-        public int data;
-        public Node link;
-        Node head;
-        public Node(int x)
+        public class Node
         {
-            data = x;
-            link = null;
-        }
-
-        public void InsertAtTheBeginning(int ndata)
-        {
-            Node newnode = new Node(ndata);
-            newnode.link = head;
-            head = newnode;
-        }
-        public void InsertIndex(Node pnode, int ndata)
-        {
-            if (pnode == null)
+            public int data;
+            public Node link;
+            Node head;
+            public Node(int x)
             {
+                data = x;
+                link = null;
+            }
+
+            public void InsertAtTheBeginning(int ndata)
+            {
+                Node newnode = new Node(ndata);
+                newnode.link = head;
+                head = newnode;
+            }
+
+            public void InsertIndex(Node pnode, int ndata)
+            {
+                if (pnode == null)
+                {
+                    return;
+                }
+                Node newnode = new Node(ndata);
+                newnode.link = pnode.link;
+                pnode.link = newnode;
+            }
+            public void InsertAtTheEnd(int ndata)
+            {
+                Node newnode = new Node(ndata);
+                if (head == null)
+                {
+                    head = new Node(ndata);
+                    return;
+                }
+                newnode.link = null;
+
+                Node last = head;
+                while (last.link != null)
+                    last = last.link;
+
+                last.link = newnode;
                 return;
             }
-            Node newnode = new Node(ndata);
-            newnode.link = pnode.link;
-            pnode.link = newnode;
-        }
-        public void InsertAtTheEnd(int ndata)
-        {
-            Node newnode = new Node(ndata);
-            if (head == null)
+            public void DeleteFromBeginning()
             {
-                head = new Node(ndata);
-                return;
+                head = head.link;
             }
-            newnode.link = null;
+            public void DeleteWithPosition(int position)
+            {
+                if (head == null)
+                {
+                    return;
+                }
+                Node temp = head;
+                if (position == 0)
+                {
+                    head = temp.link;
+                    return;
+                }
+                for (int i = 0; i != null && i < position - 1; i++)
 
-            Node last = head;
-            while (last.link != null)
-                last = last.link;
+                    temp = temp.link;
+                if (temp == null || temp.link == null)
+                {
+                    return;
+                }
+                Node next = temp.link.link;
+                temp.link = next;
+            }
+            public void DeleteFromEnd()
+            {
+                Node last = head;
+                Node prev = null;
+                while (last.link != null)
+                {
+                    prev = last;
+                    last = last.link;
+                }
+                prev.link = null;
+            }
+            public int Length()
+            {
+                Node temp = head;
+                int count = 0;
+                while (temp != null)
+                {
+                    count++;
+                    temp = temp.link;
+                }
+                return count;
+            }
+            public void Reverse()
+            {
+                Node pnode = null;
+                Node current = head;
+                Node next = null;
+                while (current != null)
+                {
+                    next = current.link;
+                    current.link = pnode;
+                    pnode = current;
+                    current = next;
+                }
+                head = pnode;
+            }
+            public void Update(int ndata, int index)
+            {
+                Node temp = head;
+                //if (index == 0)
+                //{
+                //    head.data = ndata;
+                //    return;
+                //}
+                for (int i = 1; i < index; i++)
+                {
+                    temp = temp.link;
+                }
+                temp.data = ndata;
+            }
+            public void printList()
+            {
+                Node node = head;
+                while (node != null)
+                {
+                    Console.Write(node.data + " ");
+                    node = node.link;
+                }
+            }
+        }
 
-            last.link = newnode;
-            return;
-        }
-        public void DeleteFromBeginning()
+        public static void Main(String[] args)
         {
-            head = head.link;
-        }
-        public void DeleteWithPosition(int position)
-        {
-            if (head == null)
-            {
-                return;
-            }
-            Node temp = head;
-            if (position == 0)
-            {
-                head = temp.link;
-                return;
-            }
-            for (int i = 0; i != null && i < position - 1; i++)
 
-                temp = temp.link;
-            if (temp == null || temp.link == null)
-            {
-                return;
-            }
-            Node next = temp.link.link;
-            temp.link = next;
-        }
-        public void DeleteFromEnd()
-        {
-            Node last = head;
-            Node prev = null;
-            while (last.link != null)
-            {
-                prev = last;
-                last = last.link;
-            }
-            prev.link = null;
-        }
-        public int Length(Node head)
-        {
-            Node temp = head;
-            int count = 0;
-            while (temp != null)
-            {
-                count++;
-                temp = temp.link;
-            }
-            return count;
-        }
-        public void Reverse()
-        {
-            Node pnode = null;
-            Node current = head;
-            Node next = null;
-            while (current != null)
-            {
-                next = current.link;
-                current.link = pnode;
-                pnode = current;
-                current = next;
-            }
-            head = pnode;
-        }
-        public void printList()
-        {
-            Node node = head;
-            while (node != null)
-            {
-                Console.Write(node.data + " ");
-                node = node.link;
-            }
-        }
-    }
+            Node list = new Node(5);
 
-    public static void Main(String[] args)
-    {
-
-        Node list = new Node(5);
-
-        list.InsertAtTheEnd(7);
-        list.InsertAtTheEnd(1);
-        list.InsertAtTheEnd(3);
-        list.InsertAtTheEnd(2);
-        list.InsertAtTheEnd(8);
-       
-        list.printList();
-        //list.DeleteWithPosition(4);
-        //list.DeleteEnd();
+            list.InsertAtTheBeginning(7);
+            list.InsertAtTheBeginning(1);
+            list.InsertAtTheBeginning(3);
+            list.InsertAtTheBeginning(2);
+            list.InsertAtTheBeginning(8);
+            list.Reverse();
+            list.printList();
+            Console.ReadKey();
+        }
 
     }
 }
