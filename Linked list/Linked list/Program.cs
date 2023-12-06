@@ -26,15 +26,36 @@ namespace ex
                 head = newnode;
             }
 
-            public void InsertIndex(Node pnode, int ndata)
+            public void InsertIndex(int newdata,int index)
             {
-                if (pnode == null)
+                Node newnode = new Node(newdata);
+                newnode.link = null;
+                if(index<0)
                 {
                     return;
                 }
-                Node newnode = new Node(ndata);
-                newnode.link = pnode.link;
-                pnode.link = newnode;
+                else if(index==0)
+                {
+                    newnode.link = head;
+                    head = newnode;
+                }
+                else
+                {
+                    Node temp = new Node(newdata);
+                    temp = head;
+                    for(int i=0;i<index-1;i++)
+                    {
+                        if(temp!=null)
+                        {
+                            temp = temp.link;
+                        }
+                    }
+                    if(temp!=null)
+                    {
+                        newnode.link = temp.link;
+                        temp.link = newnode;
+                    }
+                }
             }
             public void InsertAtTheEnd(int ndata)
             {
@@ -57,19 +78,19 @@ namespace ex
             {
                 head = head.link;
             }
-            public void DeleteWithPosition(int position)
+            public void DeleteWithPosition(int index)
             {
                 if (head == null)
                 {
                     return;
                 }
                 Node temp = head;
-                if (position == 0)
+                if (index == 0)
                 {
                     head = temp.link;
                     return;
                 }
-                for (int i = 0; i != null && i < position - 1; i++)
+                for (int i = 0; i != null && i < index - 1; i++)
 
                     temp = temp.link;
                 if (temp == null || temp.link == null)
@@ -90,7 +111,7 @@ namespace ex
                 }
                 prev.link = null;
             }
-            public int Length()
+            public int Size()
             {
                 Node temp = head;
                 int count = 0;
