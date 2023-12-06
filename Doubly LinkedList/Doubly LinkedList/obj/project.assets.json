@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dataStru\\Doubly LinkedList\\Doubly LinkedList\\Doubly LinkedList.csproj",
+      "projectUniqueName": "D:\\dataStru\\dataStru\\Doubly LinkedList\\Doubly LinkedList\\Doubly LinkedList.csproj",
       "projectName": "Doubly LinkedList",
-      "projectPath": "D:\\dataStru\\Doubly LinkedList\\Doubly LinkedList\\Doubly LinkedList.csproj",
+      "projectPath": "D:\\dataStru\\dataStru\\Doubly LinkedList\\Doubly LinkedList\\Doubly LinkedList.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\dataStru\\Doubly LinkedList\\Doubly LinkedList\\obj\\",
+      "outputPath": "D:\\dataStru\\dataStru\\Doubly LinkedList\\Doubly LinkedList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

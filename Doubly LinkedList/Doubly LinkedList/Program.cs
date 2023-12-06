@@ -24,25 +24,22 @@ internal class Program
             }
             else
             {
-                Node temp = new Node(ndata);
-                temp = head;
-                while (temp.link != null)
-                    temp = temp.link;
-                temp.link = newnode;
-                newnode.prev = temp;
+                head.prev = newnode;
+                newnode.link = head;
+                head = newnode;
             }
         }
-        public void InsertWithIndex(int ndata,int position)
+        public void InsertWithIndex(int ndata,int index)
         {
             Node newnode = new Node(ndata);
             newnode.link = null;
             newnode.prev = null;
 
-            if(position<0)
+            if(index<0)
             {
                 return;
             }
-            else if(position==0)
+            else if(index==0)
             {
                 newnode.link = head;
                 head.prev = newnode;
@@ -52,7 +49,7 @@ internal class Program
             {
                 Node temp = new Node(ndata);
                 temp = head;
-                for(int i=0;i<position-1;i++)
+                for(int i=0;i<index-1;i++)
                 {
                     if(temp!=null)
                     {
