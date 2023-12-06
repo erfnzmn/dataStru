@@ -84,21 +84,21 @@ namespace ex
                 {
                     return;
                 }
-                Node temp = head;
+                Node prev = head;
                 if (index == 0)
                 {
-                    head = temp.link;
+                    head = prev.link;
                     return;
                 }
                 for (int i = 0; i != null && i < index - 1; i++)
 
-                    temp = temp.link;
-                if (temp == null || temp.link == null)
+                    prev = prev.link;
+                if (prev == null || prev.link == null)
                 {
                     return;
                 }
-                Node next = temp.link.link;
-                temp.link = next;
+                Node next = prev.link.link;
+                prev.link = next;
             }
             public void DeleteFromEnd()
             {
