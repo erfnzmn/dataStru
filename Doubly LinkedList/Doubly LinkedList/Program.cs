@@ -101,6 +101,22 @@ namespace ex2
                     return;
                 temp.data = ndata;
             }
+            public void RemovefromBeginning()
+            {
+                if (head == null)
+                {
+                    return;
+                }
+                head = head.link;
+                head.prev = null;
+            }
+            public void RemovefromEnd()
+            {
+                Node temp = head;
+                while (temp.link.link != null)
+                    temp = temp.link;
+                temp.link = null;
+            }
             public int Size()
             {
                 Node temp = head;
