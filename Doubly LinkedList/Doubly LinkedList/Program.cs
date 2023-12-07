@@ -41,11 +41,11 @@ namespace ex2
                 newnode.link = null;
                 newnode.prev = null;
 
-                if (index < 0)
+                if (index < 1)
                 {
                     return;
                 }
-                else if (index == 0)
+                else if (index == 1)
                 {
                     newnode.link = head;
                     head.prev = newnode;
@@ -55,7 +55,7 @@ namespace ex2
                 {
                     Node temp = new Node(ndata);
                     temp = head;
-                    for (int i = 0; i < index - 1; i++)
+                    for (int i = 1; i < index - 1; i++)
                     {
                         if (temp != null)
                         {
@@ -117,6 +117,40 @@ namespace ex2
                     temp = temp.link;
                 temp.link = null;
             }
+            public void RemoveWithIndex(int index)
+            {
+                if (index < 1)
+                {
+                    return;
+                }
+                else if (index == 1 && head != null)
+                {
+                    Node nodeToDelete = head;
+                    head = head.link;
+                    nodeToDelete = null;
+                    if (head != null)
+                        head.prev = null;
+                }
+                else
+                {
+                    Node temp = head;
+                    for (int i = 1; i < index - 1; i++)
+                    {
+                        if (temp != null)
+                        {
+                            temp = temp.link;
+                        }
+                    }
+                    if (temp != null && temp.link != null)
+                    {
+                        Node nodeToDelete = temp.link;
+                        temp.link = temp.link.link;
+                        if (temp.link.link != null)
+                            temp.link.link.prev = temp.link;
+                        nodeToDelete = null;
+                    }
+                }
+            }
             public int Size()
             {
                 Node temp = head;
@@ -147,7 +181,8 @@ namespace ex2
             list.InsertAtTheEnd(2);
             list.InsertAtTheEnd(3);
             list.InsertAtTheEnd(4);
-            list.Update(20, 1);
+            //list.Update(20, 1);
+            list.RemoveWithIndex(2);
             list.printList();
             Console.ReadKey();
         }
