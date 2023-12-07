@@ -65,6 +65,24 @@
                 temp.link = newnode;
             }
         }
+        public void InsertAtTheEnd(int ndata)
+        {
+            Node newnode = new Node(ndata);
+            if (head == null)
+            {
+                head = newnode;
+                newnode.link = head;
+            }
+            Node last = Lastnode(head);
+            last.link = newnode;
+            newnode.link = head;
+        }
+        public void RemoveNodeAtBeginning()
+        {
+            Node last = Lastnode(head);
+            head = head.link;
+            last.link = head;
+        }
         public void RemoveWithIndex(int index)
         {
             Node NodeToDelete = head;
@@ -109,6 +127,26 @@
                 temp.link = temp.link.link ;
                 NodeToDelete = null;
             }
+        }
+        public void RemoveNodeAtEnd()
+        {
+            Node last = head;
+            Node prev = null;
+            while (last.link != head)
+            {
+                prev = last;
+                last = last.link;
+            }
+            prev.link = head;
+        }
+        public void Update(int position, int ndata)
+        {
+            Node temp = head;
+            for (int i = 1; i < position; i++)
+            {
+                temp = temp.link;
+            }
+            temp.data = ndata;
         }
         public void Reverse()
         {
