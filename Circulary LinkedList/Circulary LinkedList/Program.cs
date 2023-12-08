@@ -10,6 +10,13 @@
             data = ndata;
             link = null;
         }
+        public Node Lastnode(Node head)
+        {
+            Node last = head;
+            while (last.link != head)
+                last = last.link;
+            return last;
+        }
         public void InsertAtTheBeginning(int newdata)
         {
             Node newNode = new Node(newdata);
