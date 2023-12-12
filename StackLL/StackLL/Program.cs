@@ -4,10 +4,10 @@ using static StackLL.LinkedList;
 internal class Program
 {
     private Node top;
-
+    Node stack = new Node(3);
     public bool isempty()
     {
-        if (top.head == null)
+        if (top == null)
             return true;
         else
             return false;
@@ -20,12 +20,12 @@ internal class Program
         }
         else
         {
-            top.InsertAtTheEnd(item);
+            stack.InsertAtTheEnd(item);
         }
     }
     public void pop()
     {
-        top.DeleteFromEnd();
+        stack.DeleteFromEnd();
     }
    
 }

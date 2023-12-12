@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,9 @@ internal class Program
 {
     class Queue
     {
-    public Node front;
-    public Node rear;
+    public int front;
+    public int rear;
+    Node queue = new Node(3);
     public void enqueue(int item)
     {
         if (front == rear)
@@ -18,7 +20,7 @@ internal class Program
         }
         else
         {
-            rear.InsertAtTheEnd(item);
+            queue.InsertAtTheEnd(item);
         }
     }
     public void dequeue()
@@ -29,22 +31,12 @@ internal class Program
         }
         else
         {
-            front.DeleteFromBeginning();
+            queue.DeleteFromBeginning();
         }
     }
         public void printlist()
         {
-            printlist();
-        }
-        
-}
-    private static void Main(string[] args)
-    {
-        Queue myque = new Queue();
-        myque.enqueue(1);
-        myque.enqueue(8);
-        myque.enqueue(34);
-        myque.printlist();
-
+            queue.printList();
+        }     
     }
 }

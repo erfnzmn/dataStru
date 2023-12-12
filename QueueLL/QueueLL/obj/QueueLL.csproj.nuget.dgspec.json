@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dataStru\\QueueLL\\QueueLL\\QueueLL.csproj": {}
+    "D:\\dataStru\\dataStru\\QueueLL\\QueueLL\\QueueLL.csproj": {}
   },
   "projects": {
-    "D:\\dataStru\\QueueLL\\QueueLL\\QueueLL.csproj": {
+    "D:\\dataStru\\dataStru\\QueueLL\\QueueLL\\QueueLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataStru\\QueueLL\\QueueLL\\QueueLL.csproj",
+        "projectUniqueName": "D:\\dataStru\\dataStru\\QueueLL\\QueueLL\\QueueLL.csproj",
         "projectName": "QueueLL",
-        "projectPath": "D:\\dataStru\\QueueLL\\QueueLL\\QueueLL.csproj",
+        "projectPath": "D:\\dataStru\\dataStru\\QueueLL\\QueueLL\\QueueLL.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\dataStru\\QueueLL\\QueueLL\\obj\\",
+        "outputPath": "D:\\dataStru\\dataStru\\QueueLL\\QueueLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

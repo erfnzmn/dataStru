@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dataStru\\StackLL\\StackLL\\StackLL.csproj": {}
+    "D:\\dataStru\\dataStru\\StackLL\\StackLL\\StackLL.csproj": {}
   },
   "projects": {
-    "D:\\dataStru\\StackLL\\StackLL\\StackLL.csproj": {
+    "D:\\dataStru\\dataStru\\StackLL\\StackLL\\StackLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataStru\\StackLL\\StackLL\\StackLL.csproj",
+        "projectUniqueName": "D:\\dataStru\\dataStru\\StackLL\\StackLL\\StackLL.csproj",
         "projectName": "StackLL",
-        "projectPath": "D:\\dataStru\\StackLL\\StackLL\\StackLL.csproj",
+        "projectPath": "D:\\dataStru\\dataStru\\StackLL\\StackLL\\StackLL.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\dataStru\\StackLL\\StackLL\\obj\\",
+        "outputPath": "D:\\dataStru\\dataStru\\StackLL\\StackLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
