@@ -1,0 +1,7 @@
+C:\Users\fanzm\Desktop\erfnzmn\dars\datastructure\project\pro6\ExSort\ExSort\bin\Debug\ExSort.exe.config
+C:\Users\fanzm\Desktop\erfnzmn\dars\datastructure\project\pro6\ExSort\ExSort\bin\Debug\ExSort.exe
+C:\Users\fanzm\Desktop\erfnzmn\dars\datastructure\project\pro6\ExSort\ExSort\bin\Debug\ExSort.pdb
+C:\Users\fanzm\Desktop\erfnzmn\dars\datastructure\project\pro6\ExSort\ExSort\obj\Debug\ExSort.csprojAssemblyReference.cache
+C:\Users\fanzm\Desktop\erfnzmn\dars\datastructure\project\pro6\ExSort\ExSort\obj\Debug\ExSort.csproj.CoreCompileInputs.cache
+C:\Users\fanzm\Desktop\erfnzmn\dars\datastructure\project\pro6\ExSort\ExSort\obj\Debug\ExSort.exe
+C:\Users\fanzm\Desktop\erfnzmn\dars\datastructure\project\pro6\ExSort\ExSort\obj\Debug\ExSort.pdb
