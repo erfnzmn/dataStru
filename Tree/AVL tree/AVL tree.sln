@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVL tree", "AVL tree\AVL tree.csproj", "{FB8E9942-B9B4-455B-8123-0A8818B068DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB8E9942-B9B4-455B-8123-0A8818B068DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB8E9942-B9B4-455B-8123-0A8818B068DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB8E9942-B9B4-455B-8123-0A8818B068DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB8E9942-B9B4-455B-8123-0A8818B068DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55B120DE-85DC-4DCA-8EDA-1A08174D27C1}
+	EndGlobalSection
+EndGlobal
