@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nP4bfpLHHIrPdfOD/v+C/PJMWJmkFMWQfDzwM4IYYTMlbMiZyTyb9cCHtV545hiaMRbbnDHfNFCM0t9Pdjszww==",
+  "dgSpecHash": "a+d9h0fzAwOm35dgzL9x4jVSnB3XwknWTQLKEINKYw+ZJ9bsYFv7On9gJYkosWMAQTFvDV9Re8mLlYHg4wKspw==",
   "success": true,
-  "projectFilePath": "D:\\dataStru\\AVL tree\\AVL tree\\AVL tree.csproj",
+  "projectFilePath": "D:\\dataStru\\dataStru\\Tree\\AVL tree\\AVL tree\\AVL tree.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

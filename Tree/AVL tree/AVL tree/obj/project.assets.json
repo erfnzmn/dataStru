@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dataStru\\AVL tree\\AVL tree\\AVL tree.csproj",
+      "projectUniqueName": "D:\\dataStru\\dataStru\\Tree\\AVL tree\\AVL tree\\AVL tree.csproj",
       "projectName": "AVL tree",
-      "projectPath": "D:\\dataStru\\AVL tree\\AVL tree\\AVL tree.csproj",
+      "projectPath": "D:\\dataStru\\dataStru\\Tree\\AVL tree\\AVL tree\\AVL tree.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\dataStru\\AVL tree\\AVL tree\\obj\\",
+      "outputPath": "D:\\dataStru\\dataStru\\Tree\\AVL tree\\AVL tree\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
