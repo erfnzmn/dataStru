@@ -1,42 +1,167 @@
-﻿
-using System.ComponentModel.Design.Serialization;
-using System.Xml;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Node
-    {
-        public int data;
-        public Node Child;
-        public Node next;
-    public Node(int v)
-    {
-        this.data = v;
-        Child = null;
-    }
-}
-public class Tree
+namespace SimpleTree
 {
-    public Node root;
-    public Node Insert(Node parent, int data)
+
+    class Program
     {
-        if (root == null)
+        public class Node
         {
-            root = new Node(data);
+            public int data;
+            public Node Child;
+            public Node next;
+            public Node(int v)
+            {
+                data = v;
+                Child = null;
+                next = null;
+            }
         }
-        parent.Child = new Node(data)
+        public class Tree
         {
-            next = parent.Child
-        };
-        return parent.Child;
-    }
- 
-    private static void Main(string[] args)
-    {
-        Tree t = new Tree();
-        t.root = new Node(6);
-        t.Insert(t.root, 5);
-        t.Insert(t.root,8);
-        t.Insert(t.root, 21);
-        //t.Insert(t.root.next, 9);
-        Node x = t.Search(t.root,5);
+            public Node root;
+            public void Insert(int data, int ndata)
+            {
+                if (root == null)
+                {
+                    root = new Node(ndata);
+                    return;
+                }
+
+                Node P = Search(root, data);
+
+                if (P != null)
+                {
+                    Node n = new Node(ndata);
+                    if (P.Child == null)
+                    {
+                        P.Child = n;
+                    }
+                    else
+                    {
+                        Node temp = P.Child;
+                        while (temp.next != null)
+                            temp = temp.next;
+                        temp.next = n;
+                    }
+                }
+            }
+
+            public Node Search(Node root, int data)
+            {
+                if (root == null)
+                    return null;
+
+                Queue<Node> q = new Queue<Node>();
+                q.Enqueue(root);
+
+                while (q.Count > 0)
+                {
+                    int n = q.Count;
+
+                    while (n > 0)
+                    {
+                        Node p = q.Peek();
+                        q.Dequeue();
+
+                        if (p.data == data)
+                            return p;
+
+                        if (p.Child != null)
+                        {
+                            Node temp = p.Child;
+                            q.Enqueue(temp);
+                            while (temp.next != null)
+                            {
+                                q.Enqueue(temp.next);
+                                temp = temp.next;
+                            }
+                        }
+                        n--;
+                    }
+                }
+
+                return null;
+            }
+            public void Remove(int data)
+            {
+                if (root == null)
+                {
+                    return;
+                }
+                if (root.data == data)
+                {
+                    root = null;
+                    return;
+                }
+                Node parent = null;
+                Node nodeToRemove = null;
+                bool isChildNode = false;
+                //queue for BFS
+                Queue<Node> q = new Queue<Node>();
+                q.Enqueue(root);
+
+
+                while (q.Count > 0 && nodeToRemove == null)
+                {
+                    int n = q.Count;
+
+                    while (n > 0)
+                    {
+                        Node p = q.Peek();
+                        q.Dequeue();
+
+                        if (p.Child != null)
+                        {
+                            if (p.Child.data == data)
+                            {
+                                parent = p;
+                                nodeToRemove = p.Child;
+                                isChildNode = true;
+                                break;
+                            }
+                            else
+                            {
+                                Node temp = p.Child;
+                                q.Enqueue(temp);
+
+                                while (temp.next != null)
+                                {
+                                    if (temp.next.data == data)
+                                    {
+                                        parent = temp;
+                                        nodeToRemove = temp.next;
+                                        break;
+                                    }
+
+                                    q.Enqueue(temp.next);
+                                    temp = temp.next;
+                                }
+                            }
+                        }
+                        n--;
+                    }
+                }
+                if (nodeToRemove != null)
+                {
+
+                    if (isChildNode)
+                    {
+                        parent.Child = nodeToRemove.next;
+                    }
+                    else
+                    {
+                        parent.next = nodeToRemove.next;
+                    }
+                    nodeToRemove = null;
+                }
+            }
+
+
+        }
     }
 }

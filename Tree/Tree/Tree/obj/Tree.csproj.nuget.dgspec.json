@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dataStru\\Tree\\Tree\\Tree.csproj": {}
+    "D:\\dataStru\\dataStru\\Tree\\Tree\\Tree\\Tree.csproj": {}
   },
   "projects": {
-    "D:\\dataStru\\Tree\\Tree\\Tree.csproj": {
+    "D:\\dataStru\\dataStru\\Tree\\Tree\\Tree\\Tree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataStru\\Tree\\Tree\\Tree.csproj",
+        "projectUniqueName": "D:\\dataStru\\dataStru\\Tree\\Tree\\Tree\\Tree.csproj",
         "projectName": "Tree",
-        "projectPath": "D:\\dataStru\\Tree\\Tree\\Tree.csproj",
+        "projectPath": "D:\\dataStru\\dataStru\\Tree\\Tree\\Tree\\Tree.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\dataStru\\Tree\\Tree\\obj\\",
+        "outputPath": "D:\\dataStru\\dataStru\\Tree\\Tree\\Tree\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

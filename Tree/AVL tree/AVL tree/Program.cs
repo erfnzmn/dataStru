@@ -7,19 +7,15 @@ public class AVLtree
     { 
         public int height;
         public int data;
-        public AVLNode rightroot;
-        public AVLNode leftroot;
+        public AVLNode right;
+        public AVLNode left;
         public AVLNode(int d)
         {
             this.data = d;
         }
-        public string ToString()
-        {
-           return "value:" + " " + this.data;  
-        }
     }
     private AVLNode root;
-    public void Insertroot(int data)
+    public void Insert(int data)
     {
        root = insert(root, data);
     }
@@ -31,30 +27,20 @@ public class AVLtree
         }
         else if(data<root.data)
         {
-            root.leftroot = insert(root.leftroot, data);
+            root.left = insert(root.left, data);
         }
         else
         {
-            root.rightroot = insert(root.rightroot, data);
+            root.right = insert(root.right, data);
         }
-        
-        var balance = Balanced(root);
-        if(isLeftHeavy(root))
-        {
-            Console.WriteLine(root.data+" is Left Heavy..");
-        }
-        else if(isRightHeavy(root))
-        {
-            Console.WriteLine(root.data+" is Right Heavy..");
-        }
-
-        return root;
+        setheight(root);
+        return balance(root);
     }
     AVLNode minValueNode(AVLNode node)
     {
         AVLNode temp = node;
-        while (temp.leftroot != null)
-            temp = temp.leftroot;
+        while (temp.left != null)
+            temp = temp.left;
 
         return temp;
     }
@@ -66,23 +52,23 @@ public class AVLtree
         }
         if(data<root.data)
         {
-            root.leftroot = DeleteNode(root.leftroot, data);
+            root.left = DeleteNode(root.left, data);
         }
         else if(data>root.data)
         {
-            root.rightroot = DeleteNode(root.rightroot, data);
+            root.right = DeleteNode(root.right, data);
         }
         else
         {
-            if ((root.leftroot == null) || (root.rightroot == null))
+            if ((root.left == null) || (root.right == null))
             {
                 AVLNode temp = null;
-                if (temp == root.leftroot)
+                if (temp == root.left)
                 {
-                    temp = root.rightroot;
+                    temp = root.right;
                 }
                 else
-                    temp = root.leftroot;
+                    temp = root.left;
                 if (temp == null)
                 {
                     temp = root;
@@ -93,43 +79,43 @@ public class AVLtree
             }
             else
             {
-                AVLNode temp = minValueNode(root.rightroot);
+                AVLNode temp = minValueNode(root.right);
                 root.data = temp.data;
-                root.rightroot = DeleteNode(root.rightroot, temp.data);
+                root.right = DeleteNode(root.right, temp.data);
             }
         }
         if(root==null)
         {
             return root;
         }
-        root.height = Math.Max(height(root.leftroot), height(root.rightroot)) + 1;
+        root.height = Math.Max(height(root.left), height(root.right)) + 1;
 
-        int balance = Balanced(root);
-        if(isLeftHeavy(root) && Balanced(root.leftroot)>=0)
+        return balance(root);
+        if(isLeftHeavy(root) && BalancedFactor(root.left) >=0)
         {
             return RotationRight(root);
         }
-        else if(isLeftHeavy(root)&&Balanced(root.leftroot)<0)
+        else if(isLeftHeavy(root)&& BalancedFactor(root.left) <0)
         {
-            root.leftroot = RotationLeft(root.leftroot);
+            root.left = RotationLeft(root.left);
             return RotationRight(root);
         }
-        else if(isRightHeavy(root) && Balanced(root.rightroot)<=0)
+        else if(isRightHeavy(root) && BalancedFactor(root.right) <=0)
         {
             return RotationLeft(root);
         }
-        else if(isRightHeavy(root)&&Balanced(root.rightroot)>0)
+        else if(isRightHeavy(root)&& BalancedFactor(root.right) >0)
         {
-            root.rightroot = RotationRight(root.rightroot);
+            root.right = RotationRight(root.right);
             return RotationLeft(root);
         }
         return root;
     }
     public AVLNode RotationLeft(AVLNode root)
     {
-        var newRoot = root.rightroot;
-        root.rightroot = newRoot.leftroot;
-        newRoot.leftroot = root;
+        var newRoot = root.right;
+        root.right = newRoot.left;
+        newRoot.left = root;
         setheight(root);
         setheight(newRoot);
 
@@ -137,42 +123,12 @@ public class AVLtree
     }
     public AVLNode RotationRight(AVLNode root)
     {
-        var newRoot = root.leftroot;
-        root.leftroot = newRoot.rightroot;
-        newRoot.rightroot = root;
+        var newRoot = root.left;
+        root.left = newRoot.right;
+        newRoot.right = root;
         setheight(root);
         setheight(newRoot);
         return newRoot;
-    }
-    public void preorder(AVLNode root)
-    {
-        if(root==null)
-        {
-            return;
-        }
-        Console.WriteLine(root.data);
-        preorder(root.leftroot);
-        preorder(root.rightroot);
-    }
-    public void inorder(AVLNode root)
-    {
-        if (root == null)
-        {
-            return; 
-        }
-        inorder(root.leftroot);
-        Console.WriteLine(root);
-        inorder(root.rightroot);
-    }
-    public void postorder(AVLNode root)
-    {
-        if(root==null)
-        {
-            return;
-        }
-        postorder(root.leftroot);
-        postorder(root.rightroot);
-        Console.WriteLine(root);
     }
    public static bool Find(AVLNode root,int data)
     {
@@ -181,9 +137,9 @@ public class AVLtree
         else if (root.data == data)
             return true;
         else if (root.data < data)
-            return Find(root.rightroot, data);
+            return Find(root.right, data);
         else 
-            return Find(root.leftroot, data);
+            return Find(root.left, data);
     }
     private int height(AVLNode node)
     {
@@ -194,43 +150,61 @@ public class AVLtree
     }
     private void setheight(AVLNode node)
     {
-        node.height = Math.Max(height(node.leftroot), height(node.rightroot)) + 1;
+        node.height = Math.Max(height(node.left), height(node.right)) + 1;
     }
     private bool isRightHeavy(AVLNode node)
     {
-        return Balanced(node) <-1;
+        return BalancedFactor(node) <-1;
     }
     private bool isLeftHeavy(AVLNode node)
     {
-        return Balanced(node) >1; 
+        return BalancedFactor(node) >1; 
     }
-    private int Balanced(AVLNode node)
+    private int BalancedFactor(AVLNode node)
     {
         if (node == null)
             return 0;
         else
-        {
-            return height(node.leftroot) - height(node.rightroot);
-        }
+            return height(node.left) - height(node.right);
     }
     public AVLNode balance(AVLNode node)
     {
         if(isLeftHeavy(root))
         {
-            if(Balanced(root.leftroot)<0)
+            if(BalancedFactor(root.left) <0)
             {
-                root.leftroot=RotationLeft(root.leftroot);
+                root.left=RotationLeft(root.left);
                 return RotationRight(root);
             }
         }
         else if(isRightHeavy(root))
         {
-            if(Balanced(root.rightroot)>0)
+            if(BalancedFactor(root.right) >0)
             {
-                root.rightroot=RotationRight(root.rightroot);
+                root.right = RotationRight(root.right);
                 return RotationLeft(root);
             }
         }
         return root;
+    }
+    public void inorder(AVLNode root)
+    {
+        if (root == null)
+        {
+            return;
+        }
+        inorder(root.left);
+        Console.WriteLine(root);
+        inorder(root.right);
+    }
+    public void PrintAVL()
+    {
+        if (root == null)
+        {
+            Console.WriteLine("AVL is empty");
+            return;
+        }
+        Console.WriteLine("Printing AVL:");
+        inorder(root);
     }
 }

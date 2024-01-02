@@ -46,7 +46,7 @@ class MaxHeap
     {
         root = Delete(root, value);
     }
-    private Node Delete(Node root, int value)
+    private Node Delete(Node root,int value)
     {
         if (root == null)
             return root;

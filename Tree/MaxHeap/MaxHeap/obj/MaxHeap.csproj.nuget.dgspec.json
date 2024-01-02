@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dataStru\\MaxHeap\\MaxHeap\\MaxHeap.csproj": {}
+    "D:\\dataStru\\dataStru\\Tree\\MaxHeap\\MaxHeap\\MaxHeap.csproj": {}
   },
   "projects": {
-    "D:\\dataStru\\MaxHeap\\MaxHeap\\MaxHeap.csproj": {
+    "D:\\dataStru\\dataStru\\Tree\\MaxHeap\\MaxHeap\\MaxHeap.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataStru\\MaxHeap\\MaxHeap\\MaxHeap.csproj",
+        "projectUniqueName": "D:\\dataStru\\dataStru\\Tree\\MaxHeap\\MaxHeap\\MaxHeap.csproj",
         "projectName": "MaxHeap",
-        "projectPath": "D:\\dataStru\\MaxHeap\\MaxHeap\\MaxHeap.csproj",
+        "projectPath": "D:\\dataStru\\dataStru\\Tree\\MaxHeap\\MaxHeap\\MaxHeap.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\dataStru\\MaxHeap\\MaxHeap\\obj\\",
+        "outputPath": "D:\\dataStru\\dataStru\\Tree\\MaxHeap\\MaxHeap\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

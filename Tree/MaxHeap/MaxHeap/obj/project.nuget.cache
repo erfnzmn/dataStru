@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M7JYmS8uCIoBUrQLR6DN4oEgcX0V4ObgindgAqeEn1fVPyMgVLmMbUFrhwEXlE6sl/xZI113Q65Hq8mkwPA52g==",
+  "dgSpecHash": "hc8fbGnOaMy2InPH67Nj4ZYKHRxAqQ3MwUsqnomkuw3//wRXxzp4A4G8Wmn2ViOXHAF+tIH9fUVya5p/4ZHkpA==",
   "success": true,
-  "projectFilePath": "D:\\dataStru\\MaxHeap\\MaxHeap\\MaxHeap.csproj",
+  "projectFilePath": "D:\\dataStru\\dataStru\\Tree\\MaxHeap\\MaxHeap\\MaxHeap.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
